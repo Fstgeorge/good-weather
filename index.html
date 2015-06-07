@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Good Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header" data-position-fixed="true">
+        <h1>Good Weather</h1>
+        <a href="#left-panel" data-role="button" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div>
+    <div role="main" class="ui-content">
+        <h1 id="current_temp" class="icon" data-icon="C">65&#176;F</h1>
+
+        <p id="currtent_summary">Parly Cloudy</p>
+
+        <p id="location">Current Location</p>
+    </div>
+    <div data-role="panel" data-position="left" data-display="reveal" data-theme="c" id="left-panel">
+        <ul data-role="listview" data-divider-theme="a">
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+            <li data-role="list-divider">Select a City</li>
+            <li><a href="#" class="city" data-rel="close">Current Location</a></li>
+            <li><a href="#" class="city" data-rel="close">Chicago</a></li>
+            <li><a href="#" class="city" data-rel="close">Los Angeles</a></li>
+            <li><a href="#" class="city" data-rel="close">Miami</a></li>
+            <li><a href="#" class="city" data-rel="close">New York</a></li>
+            <li><a href="#" class="city" data-rel="close">San Francisco</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+</div>
+</body>
+</html>
