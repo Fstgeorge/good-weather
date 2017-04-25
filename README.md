@@ -4,7 +4,10 @@ simple weather app called GOOD Weather using jQuery Mobile. Find out the strengt
 
 
 Made by [Fabian St. George](//fabianstgeorge.me)
+
 Contact me at djangofabian@gmail.com
-Code released under the [MIT License](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE).
+
 Base on [jQuery Mobile](http://jquerymobile.com/), API: [simpleWeather](http://simpleweatherjs.com/)
+
+Code released under the [MIT License](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE).
 

@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>Good Weather</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" href="css/stylesheet.css"/>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 <div data-role="page">
@@ -17,17 +15,25 @@
         <a href="#left-panel" data-role="button" data-icon="bars" data-iconpos="notext">Menu</a>
     </div>
     <div role="main" class="ui-content">
+        <div id="weather"></div>
+        <a href="#" class="js-geolocation" style="display: none;">Use Your Location</a>
+
+        <div id="coords"></div>
+        <!--
+        <button class="js-geolocation" style="display: none;">Use Your Location</button>
         <h1 id="current_temp" class="icon" data-icon="C">65&#176;F</h1>
+
 
         <p id="currtent_summary">Parly Cloudy</p>
 
         <p id="location">Current Location</p>
+        -->
     </div>
     <nav data-role="panel" data-position="left" data-display="reveal" data-theme="c" id="left-panel">
         <ul data-role="listview" data-divider-theme="a">
             <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
             <li data-role="list-divider">Select a City</li>
-            <li><a href="#" class="city" data-rel="close">Current Location</a></li>
+            <li><a href="#" id="current-location" class="city" data-rel="close">Current Location</a></li>
             <li><a href="#" class="city" data-rel="close">Chicago</a></li>
             <li><a href="#" class="city" data-rel="close">Los Angeles</a></li>
             <li><a href="#" class="city" data-rel="close">Miami</a></li>
@@ -36,6 +42,30 @@
         </ul>
     </nav>
     <!-- /panel -->
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="bower_components/simpleWeather/jquery.simpleWeather.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+
+
+        $(document).ready(function() {
+
+            var city = $('.city');
+
+            city.on('click', function (e) {
+                e.preventDefault();
+                var $this = $(this);
+//                console.log('===' + $this.text());
+
+            });
+        });
+
+
+    </script>
+
 </div>
 </body>
 </html>
